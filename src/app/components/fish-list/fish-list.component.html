@@ -1,0 +1,21 @@
+Helloooooo
+<table border="1" class="table">
+    <thead>
+        <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Description</th>
+            <th>Price</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr *ngFor="let fish of fish">
+            <td>
+                <img [src]="fish.imageUrl" height="50"/>
+            </td>
+            <td>{{fish.name}}</td>
+            <td>{{fish.description}}</td>
+            <td>{{fish.unitPrice | currency: 'INR'}}</td>
+        </tr>
+    </tbody>
+</table>

@@ -51,6 +51,7 @@ export class FishListComponent implements OnInit {
 
   listfish(){
     this.searchMode = this._activatedRoute.snapshot.paramMap.has('keyword');
+    console.log("Hello Keyword first yes or no"+ this.searchMode);
 
     if(this.searchMode){
       //do search work
@@ -58,12 +59,13 @@ export class FishListComponent implements OnInit {
     }else {
       //display fish based on category
       this.handleListFish();
+      
     }
   }
 
   handleListFish(){
     const hasCategoryId: boolean = this._activatedRoute.snapshot.paramMap.has('id');
-    
+    console.log("Hello Keyword first category id"+this._activatedRoute.snapshot.paramMap.get('id')+""+hasCategoryId);
     if (hasCategoryId) {
       this.currentCategoryId = +this._activatedRoute.snapshot.paramMap.get('id');
     }else {
@@ -77,7 +79,7 @@ export class FishListComponent implements OnInit {
     }
 
     this.previousCategoryId = this.currentCategoryId;
-
+    console.log('currentCategoryId', this.currentCategoryId);
     console.log('current page size', this.currentPage-1);
     
     this._fishService.getFishPaginate(this.currentCategoryId, 
@@ -114,7 +116,7 @@ export class FishListComponent implements OnInit {
   addToCart(fish: Fish){
     console.log(`fish name: ${fish.name}, and price: ${fish.unitPrice}`);
     const cartItem = new CartItem(fish);
-    //this._cartService.addToCart(cartItem);
+    this._cartService.addToCart(cartItem);
   }
 
 

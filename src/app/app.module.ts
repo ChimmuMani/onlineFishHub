@@ -1,6 +1,6 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-
+import { Routes, RouterModule } from '@angular/router';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
@@ -13,6 +13,7 @@ import { CheckoutComponent } from './components/checkout/checkout.component';
 import { PageNotFoundComponent } from './components/page-not-found/page-not-found.component';
 import { SearchComponent } from './components/search/search.component';
 import { HttpClientModule } from '@angular/common/http';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 
 
 @NgModule({
@@ -30,7 +31,7 @@ import { HttpClientModule } from '@angular/common/http';
   imports: [
     BrowserModule,
     AppRoutingModule,
-    NgbModule,HttpClientModule
+    NgbModule,HttpClientModule,FormsModule, ReactiveFormsModule 
   ],
   providers: [],
   bootstrap: [AppComponent]

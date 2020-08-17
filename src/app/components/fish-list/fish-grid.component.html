@@ -29,7 +29,7 @@
           </div>
         </div>
         <div *ngIf="fish?.length == 0" class="col-md-12 alert alert-warning mt-1">
-          No books found
+          No Fish found
         </div>
       </div>
       <div class="row">
@@ -58,7 +58,7 @@
         <div class="col-md-6">
           
           <!-- client side paging -->
-          <!-- <jw-pagination [items]="books" (changePage)="onChangePage($event)"></jw-pagination> -->
+          <!-- <jw-pagination [items]="fish" (changePage)="onChangePage($event)"></jw-pagination> -->
   
           <ngb-pagination [(page)]="currentPage"
                           [pageSize]="pageSize" 

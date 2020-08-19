@@ -11,8 +11,8 @@ import { Fish} from '../common/fish.model';
 export class FishService {
 
 
-  private baseUrl = "http://localhost:8080/api/v1/fish";
-  private categoryUrl = "http://localhost:8080/api/v1/fish-category";
+  private baseUrl = "http://fmarket.ap-south-1.elasticbeanstalk.com/api/v1/fish";
+  private categoryUrl = "http://fmarket.ap-south-1.elasticbeanstalk.com/api/v1/fish-category";
 
   constructor(private httpClient: HttpClient) { }
 
